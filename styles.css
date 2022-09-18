@@ -1,0 +1,145 @@
+
+* { /* Resetando espaços do navegador */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body * { /* Fonte de Todos os Textos */
+    font-family: 'Josefin Sans';
+    line-height: 160%;
+}
+
+header { /* Espaço Logo */
+    padding-top: 32px;
+    height: 152px;
+}
+
+header div { /* Logo */
+    width: 120px;
+    margin: auto;
+    background-image: linear-gradient(90deg,  #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    border-radius: 50%;
+    display: flex;
+    padding: 4px;
+}
+ 
+header div { /* Animação da Logo */
+    transition: transform .2s;
+    animation: fromTop .4s .2s backwards;
+}
+
+main section{ /* Animação das Listas */
+    animation: fromBottom .4s .2s backwards;
+}
+
+main section:nth-child(1) { 
+    animation-delay: 0;
+}
+
+main section:nth-child(2) {
+    animation-delay: .4s;
+}
+
+main section:nth-child(3) {
+    animation-delay: .8s;
+}
+
+header div:hover { /* Mouse sobre a Logo */
+    transform: scale(1.1);
+}
+
+header div img { /*Relação da Imagem ao fundo Logo*/
+    width: 100%;
+    border-radius: 50%;
+}
+
+ul {
+    list-style: none;
+}
+
+body{ /* Imagem de Fundo da Página */
+    background-image: url(./assets/Background.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+}
+
+main{ /*Conjunto de Listas*/
+    max-width: 580px;
+    width: 90%;
+    margin: 32px auto;
+    display: grid;
+    gap: 20px;
+}
+
+section { /* Bordas das Listas */
+    color: white;
+    background-image: linear-gradient(90deg,  #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+}
+
+section div { /* Fundo das Listas */
+    background-color: #2A2634;
+    padding: 32px;
+    padding-top: 20px;
+    border-radius: 8px;
+}
+
+section p { /* Formatação dos Textos Secundários */
+    color: #A1A1AA;
+    letter-spacing: -0.5px;
+}
+
+section ul { /* Organização dos Itens da Lista */
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+section ul li { /* Transição Cards-Lists */
+    transition: transform .2s;
+}
+
+section ul li:hover { /* Transição Cards-Lists */
+    transform: scale(1.1);
+}
+
+.games-list img {
+    width: 90px;
+    border-radius: 8px;
+}
+
+.channel-list img {
+    width: 70px;
+    border-radius: 50%;
+    border: 1px solid gray;
+}
+
+@keyframes fromTop {
+    from{
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fromBottom {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
