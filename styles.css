@@ -68,6 +68,7 @@ body{ /* Imagem de Fundo da Página */
 
 main{ /*Conjunto de Listas*/
     max-width: 580px;
+    height: auto;
     width: 90%;
     margin: 32px auto;
     display: grid;
@@ -107,6 +108,13 @@ section ul li { /* Transição Cards-Lists */
 
 section ul li:hover { /* Transição Cards-Lists */
     transform: scale(1.1);
+}
+
+.social-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
 }
 
 .games-list img {
